@@ -845,18 +845,18 @@ const generateRemark = (index, port) => {
     switch (index) {
         case 0:
         case 1:
-            remark = `Ðoϻɑiͷ⇢ ${index + 1} : ${port}`;
+            remark = `POORIA ${index + 1} : ${port}`;
             break;
         case 2:
         case 3:
-            remark = `IPv4⇢ ${index - 1} : ${port}`;
+            remark = `POORIA IPv4⇢ ${index - 1} : ${port}`;
             break;
         case 4:
         case 5:
-            remark = `IPv6⇢ ${index - 3} : ${port}`;
+            remark = `POORIA IPv6⇢ ${index - 3} : ${port}`;
             break;
         default:
-            remark = `Clean IP⇢ ${index - 5} : ${port}`;
+            remark = `POORIA Clean IP⇢ ${index - 5} : ${port}`;
             break;
     }
 
@@ -988,7 +988,7 @@ const buildWorkerLessConfig = async (env, client) => {
     fakeOutbound.tag = 'fake-outbound';
 
     let fragConfig = structuredClone(xrayConfigTemp);
-    fragConfig.remarks  = '🐓 WorkerLess Config'
+    fragConfig.remarks  = 'POORIA🐓 WorkerLess Config'
     fragConfig.dns = await buildDNSObject(remoteDNS, localDNS, blockAds, bypassIran, blockPorn, true);
     fragConfig.outbounds[0].settings.domainStrategy = 'UseIP';
     fragConfig.outbounds[0].settings.fragment.length = `${lengthMin}-${lengthMax}`;
@@ -1135,7 +1135,7 @@ const getFragmentConfigs = async (env, hostName, client) => {
     };
 
     let bestPing = structuredClone(xrayConfigTemp);
-    bestPing.remarks = '☆ Best Fragment Ping';
+    bestPing.remarks = '☆POORIA Best Fragment Ping';
     bestPing.dns = await buildDNSObject(remoteDNS, localDNS, blockAds, bypassIran, blockPorn);
     bestPing.outbounds[0].settings.fragment.length = `${lengthMin}-${lengthMax}`;
     bestPing.outbounds[0].settings.fragment.interval = `${intervalMin}-${intervalMax}`;
@@ -1157,7 +1157,7 @@ const getFragmentConfigs = async (env, hostName, client) => {
     }
 
     let bestFragment = structuredClone(xrayConfigTemp);
-    bestFragment.remarks = '★ Best Fragment Values';
+    bestFragment.remarks = '★POORIA Best Fragment Values';
     bestFragment.dns = await buildDNSObject(remoteDNS, localDNS, blockAds, bypassIran, blockPorn);
     bestFragment.outbounds.splice(0,1);
     bestFragValues.forEach( (fragLength, index) => {
